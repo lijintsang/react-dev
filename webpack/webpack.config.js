@@ -64,7 +64,14 @@ module.exports = {
           /* display: -webkit-box; display: -ms-flexbox; display: flex; */
           {
             loader: 'postcss-loader',
-            options: { postcssOptions: { plugins: [require('autoprefixer')] } },
+            options: {
+              postcssOptions: {
+                // 可以添加其他 PostCSS 插件
+                plugins: [require('autoprefixer')],
+                // 使用 postcss-less 插件支持 LESS
+                syntax: 'postcss-less',
+              },
+            },
           },
         ],
       },
