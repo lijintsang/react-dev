@@ -1,0 +1,1 @@
+{"version":3,"file":"394.css","mappings":"AAEA,cACE,YADF,6BAGI,SAAJ","sources":["webpack://client4/./src/pages/Home/index.less"],"sourcesContent":["@textColor: red;\n\n.main {\n  padding: 30px;\n  .text {\n    color: @textColor;\n  }\n}\n"],"names":[],"sourceRoot":""}

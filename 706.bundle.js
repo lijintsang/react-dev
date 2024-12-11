@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkclient4=self.webpackChunkclient4||[]).push([[706],{9706:(s,e,r)=>{r.r(e),r.d(e,{default:()=>l});var n=r(8936);r(6540);const t="text___PxNNY";var c=r(181),i=r(4848);const l=()=>{const s=(0,c.Zp)();return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsxs)("div",{children:[(0,i.jsx)("div",{className:t,children:(0,i.jsx)("p",{children:"userFirst"})}),(0,i.jsx)(n.Ay,{type:"link",onClick:()=>s("/user/userFirst"),children:"userFirst"})]}),(0,i.jsx)(c.sv,{})]})}}}]);
+//# sourceMappingURL=706.bundle.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkclient4=self.webpackChunkclient4||[]).push([[609],{609:(e,s,c)=>{c.r(s),c.d(s,{default:()=>l});c(6540);var i=c(4848);const l=()=>(0,i.jsx)("div",{children:(0,i.jsx)("p",{children:"HomeFirst"})})}}]);
+//# sourceMappingURL=609.bundle.js.map

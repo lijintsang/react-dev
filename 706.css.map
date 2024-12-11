@@ -1,0 +1,1 @@
+{"version":3,"file":"706.css","mappings":"AAAA,cAEE,UAAa,CADb,YAEF","sources":["webpack://client4/./src/pages/User/index.less"],"sourcesContent":[".text {\n  display: flex;\n  color: yellow;\n}"],"names":[],"sourceRoot":""}
