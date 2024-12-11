@@ -1,21 +1,21 @@
-import React, { Suspense } from 'react';
-// import styles from './App.less';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-// 懒加载页面组件
-const Home = React.lazy(() => import('@/pages/Home'));
-const User = React.lazy(() => import('@/pages/User'));
+import { Suspense } from 'react';
+import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
+import routes from '@/routes'; // 导入集中管理的路由配置
 
 const App = () => {
+  const AppRoutes = () => {
+    // 使用集中管理的路由
+    return useRoutes(routes);
+  };
+
+  const a = {
+    a: 1,
+  };
+
   return (
     <Router>
       <Suspense fallback={<div>加载中...</div>}>
-        <Routes>
-          {/* 首页 */}
-          <Route path="/" element={<Home />} />
-          {/* 个人中心页面 */}
-          <Route path="/user" element={<User />} />
-        </Routes>
+        <AppRoutes />
       </Suspense>
     </Router>
   );

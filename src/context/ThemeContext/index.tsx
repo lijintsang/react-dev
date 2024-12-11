@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from 'react';
+import { useLocalStorageState } from 'ahooks';
+import React, { createContext, useContext, useEffect } from 'react';
 
 type Theme = 'light' | 'dark';
 type ThemeContextProps = {
@@ -11,19 +12,25 @@ const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useLocalStorageState<Theme>('theme', {
+    defaultValue: 'light',
+  });
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+    setTheme(theme === 'light' ? 'dark' : 'light');
     // 修改全局 HTML 的 `data-theme` 属性
     document.documentElement.setAttribute(
       'data-theme',
-      theme === 'light' ? 'dark' : 'light'
+      theme === 'light' ? 'dark' : 'light',
     );
   };
 
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme!);
+  }, [theme]);
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme: theme!, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );

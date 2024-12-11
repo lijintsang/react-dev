@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTheme } from '@/context/ThemeContext';
-import { Button, Tooltip } from 'antd';
+import { Tooltip } from 'antd';
 import IconFont from '@/components/IconFont';
 
 const ThemeToggle: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
+  console.log('111    ', theme);
 
   return (
     <>

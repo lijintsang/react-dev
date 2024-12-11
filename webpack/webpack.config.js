@@ -12,6 +12,8 @@ module.exports = {
     filename: '[name].bundle.js',
     // 在每次构建时清理输出目录
     clean: true,
+    // 设置为项目的根路径
+    publicPath: '/',
   },
   resolve: {
     // 允许省略这些扩展名的文件导入，如 import App from './App'; 自动匹配 .tsx、.ts
