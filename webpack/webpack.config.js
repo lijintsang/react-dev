@@ -14,6 +14,7 @@ module.exports = {
     clean: true,
     // 设置为项目的根路径
     // publicPath: '/',
+    // publicPath: '/react-dev/',
   },
   resolve: {
     // 允许省略这些扩展名的文件导入，如 import App from './App'; 自动匹配 .tsx、.ts
