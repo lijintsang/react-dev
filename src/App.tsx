@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
+import { HashRouter as Router, useRoutes } from 'react-router-dom';
 import routes from '@/routes'; // 导入集中管理的路由配置
 
 const App = () => {
