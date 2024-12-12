@@ -4,7 +4,7 @@ import routes from '@/routes'; // 导入集中管理的路由配置
 
 const App = () => {
   // 动态设置 basename
-  const basename = process.env.NODE_ENV === 'production' ? '/react-dev' : '/';
+  // const basename = process.env.NODE_ENV === 'production' ? '/react-dev' : '/';
   console.error('11    ', process.env.NODE_ENV);
 
   const AppRoutes = () => {
@@ -13,7 +13,7 @@ const App = () => {
   };
 
   return (
-    <Router basename={basename}>
+    <Router>
       <Suspense fallback={<div>加载中...</div>}>
         <AppRoutes />
       </Suspense>
